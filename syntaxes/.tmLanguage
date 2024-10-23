@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>name</key>
+    <string>FORM</string>
+    <key>scopeName</key>
+    <string>source.form</string>
+    <key>fileTypes</key>
+    <array>
+      <string>frm</string>
+    </array>
+    <key>patterns</key>
+    <array>
+      <!-- Keywords -->
+      <dict>
+        <key>match</key>
+        <string>\b(symbols|indices|cfuntion|function|index|set|auto|multiply|id|module|repeat|sort|local|global)\b</string>
+        <key>name</key>
+        <string>keyword.control.form</string>
+      </dict>
+      
+      <!-- Functions -->
+      <dict>
+        <key>match</key>
+        <string>\b(CF|F|CTensors|NTensors|Tensors)\b</string>
+        <key>name</key>
+        <string>support.function.form</string>
+      </dict>
+      
+      <!-- Semicolon -->
+      <dict>
+        <key>match</key>
+        <string>;</string>
+        <key>name</key>
+        <string>punctuation.terminator.statement.form</string>
+      </dict>
+      
+      <!-- Operators -->
+      <dict>
+        <key>match</key>
+        <string>=|\+|\-|\*|\/</string>
+        <key>name</key>
+        <string>keyword.operator.form</string>
+      </dict>
+
+      <!-- Preprocessor directives -->
+      <dict>
+        <key>match</key>
+        <string>#(define|include|ifdef|endif|procedure|endprocedure)</string>
+        <key>name</key>
+        <string>meta.preprocessor.form</string>
+      </dict>
+      
+      <!-- Comments -->
+      <dict>
+        <key>begin</key>
+        <string>#</string>
+        <key>end</key>
+        <string>$</string>
+        <key>name</key>
+        <string>comment.line.form</string>
+      </dict>
+    </array>
+
+    <!-- Repository for code blocks or extensions -->
+    <key>repository</key>
+    <dict>
+      <key>block</key>
+      <dict>
+        <key>begin</key>
+        <string>#procedure</string>
+        <key>end</key>
+        <string>#endprocedure</string>
+        <key>name</key>
+        <string>meta.block.form</string>
+      </dict>
+    </dict>
+
+    <!-- Scope -->
+    <key>scopeName</key>
+    <string>source.form</string>
+  </dict>
+</plist>

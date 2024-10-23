@@ -1,0 +1,25 @@
+{
+  "name": "form",
+  "displayName": "frmLanguageSupport",
+  "description": "Basic Language Support for programming language form",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "form",
+      "aliases": ["FORM", "form"],
+      "extensions": [".frm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "form",
+      "scopeName": "source.form",
+      "path": "./syntaxes/.tmLanguage"
+    }]
+  }
+}
